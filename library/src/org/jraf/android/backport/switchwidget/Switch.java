@@ -121,7 +121,7 @@ public class Switch extends CompoundButton {
      * @param attrs Specification of attributes that should deviate from default styling.
      */
     public Switch(Context context, AttributeSet attrs) {
-        this(context, attrs, R.attr.switchStyle);
+        this(context, attrs, R.attr.bt_switchStyle);
     }
 
     /**
@@ -145,14 +145,14 @@ public class Switch extends CompoundButton {
         final TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.Switch, defStyle, 0);
 
         mThumbDrawable = a.getDrawable(R.styleable.Switch_thumb);
-        mTrackDrawable = a.getDrawable(R.styleable.Switch_track);
+        mTrackDrawable = a.getDrawable(R.styleable.Switch_bt_track);
         mTextOn = a.getText(R.styleable.Switch_textOn);
         mTextOff = a.getText(R.styleable.Switch_textOff);
-        mThumbTextPadding = a.getDimensionPixelSize(R.styleable.Switch_thumbTextPadding, 0);
-        mSwitchMinWidth = a.getDimensionPixelSize(R.styleable.Switch_switchMinWidth, 0);
-        mSwitchPadding = a.getDimensionPixelSize(R.styleable.Switch_switchPadding, 0);
+        mThumbTextPadding = a.getDimensionPixelSize(R.styleable.Switch_bt_thumbTextPadding, 0);
+        mSwitchMinWidth = a.getDimensionPixelSize(R.styleable.Switch_bt_switchMinWidth, 0);
+        mSwitchPadding = a.getDimensionPixelSize(R.styleable.Switch_bt_switchPadding, 0);
 
-        final int appearance = a.getResourceId(R.styleable.Switch_switchTextAppearance, 0);
+        final int appearance = a.getResourceId(R.styleable.Switch_bt_switchTextAppearance, 0);
         if (appearance != 0) {
             setSwitchTextAppearance(context, appearance);
         }
